@@ -1,50 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Dream Homes' available properties, including luxury villas, modern apartments, and beachfront houses. Find your dream home today!"
+    />
+    <meta
+      name="keywords"
+      content="real estate, properties, luxury homes, villas, apartments, houses, Dream Homes, buy properties, property listings"
+    />
+    <meta name="author" content="Kishan Kumar Das" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <title>Dream Homes - Properties</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <h1>Dream Homes</h1>
+        <div class="site-name">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Dream Homes Logo" /> Dream Homes
+          </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Available Properties</h2>
-            <div class="grid">
-                <div class="property-card">
-                    <img src="images/property1.jpg" alt="Luxury Villa">
-                    <h3>Luxury Villa - $750,000</h3>
-                    <p>4 Beds, 3 Baths - Suburbs</p>
-                </div>
-                <div class="property-card">
-                    <img src="images/property2.jpg" alt="Modern Apartment">
-                    <h3>Modern Apartment - $500,000</h3>
-                    <p>2 Beds, 2 Baths - Downtown</p>
-                </div>
-                <div class="property-card">
-                    <img src="images/property3.jpg" alt="Beach House">
-                    <h3>Beach House - $1,200,000</h3>
-                    <p>5 Beds, 4 Baths - Coastal</p>
-                </div>
+      </header>
+      <main>
+        <section class="properties-section">
+          <h1>Available Properties</h1>
+          <p>
+            Browse our selection of high-quality properties tailored to your
+            preferences. Whether you're looking for a luxury villa, a modern
+            apartment, or a beachfront house, Dream Homes has you covered.
+          </p>
+
+          <!-- Filter Section -->
+          <div class="filters">
+            <label for="property-type">Filter by type:</label>
+            <select id="property-type" onchange="filterProperties()">
+              <option value="all">All</option>
+              <option value="villa">Villas</option>
+              <option value="apartment">Apartments</option>
+              <option value="house">Houses</option>
+            </select>
+          </div>
+
+          <!-- Properties Grid -->
+          <div class="grid" id="properties-grid">
+            <div class="property-card" data-type="villa">
+              <img src="images/property1.jpg" alt="Luxury Villa" />
+              <h3>Luxury Villa starts - $750,000</h3>
+              <p>4 Beds, 3 Baths - Suburbs</p>
             </div>
+            <div class="property-card" data-type="apartment">
+              <img src="images/property2.jpg" alt="Modern Apartment" />
+              <h3>Modern Apartment - $500,000</h3>
+              <p>2 Beds, 2 Baths - Downtown</p>
+            </div>
+            <div class="property-card" data-type="house">
+              <img src="images/property3.jpg" alt="Beach House" />
+              <h3>Beach House - $1,200,000</h3>
+              <p>5 Beds, 4 Baths - Coastal</p>
+            </div>
+            <div class="property-card" data-type="apartment">
+              <img src="images/property4.jpg" alt="City Apartment" />
+              <h3>City Apartment - $450,000</h3>
+              <p>2 Beds, 1 Bath - City Center</p>
+            </div>
+            <div class="property-card" data-type="villa">
+              <img src="images/property5.jpg" alt="Rustic Villa" />
+              <h3>Rustic Villa starts - $800,000</h3>
+              <p>4 Beds, 3 Baths - Countryside</p>
+            </div>
+            <div class="property-card" data-type="penthouse">
+              <img src="images/property6.jpg" alt="Luxury Penthouse" />
+              <h3>Luxury Penthouse - $2,500,000</h3>
+              <p>3 Beds, 3 Baths - Skyline View</p>
+            </div>
+            <div class="property-card" data-type="house">
+              <img src="images/property7.jpeg" alt="Country Home" />
+              <h3>Country Home - $950,000</h3>
+              <p>5 Beds, 3 Baths - Quiet Retreat</p>
+            </div>
+            <div class="property-card" data-type="apartment">
+              <img src="images/property8.jpeg" alt="Urban Loft" />
+              <h3>Urban Loft - $600,000</h3>
+              <p>2 Beds, 1 Bath - City Life</p>
+            </div>
+          </div>
+          
         </section>
-        
-    </main>
-    <footer>
+      </main>
+      <footer>
         <p>&copy; 2024 Dream Homes. All rights reserved.</p>
-    </footer>
-</body>
+      </footer>
+    </div>
+
+    <script>
+      // JavaScript for filtering properties by type
+      function filterProperties() {
+        const type = document.getElementById("property-type").value;
+        const properties = document.querySelectorAll(".property-card");
+
+        properties.forEach((property) => {
+          if (type === "all" || property.getAttribute("data-type") === type) {
+            property.style.display = "block";
+          } else {
+            property.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
 </html>

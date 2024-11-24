@@ -1,44 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with Dream Homes for property inquiries, consultations, or assistance with buying or selling your property. We’re here to help!"
+    />
+    <meta
+      name="keywords"
+      content="contact us, real estate contact, Dream Homes, property inquiries, consultations, real estate support"
+    />
+    <meta name="author" content="Kishan Kumar Das" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <title>Dream Homes - Contact</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>Dream Homes</h1>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="site-name">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Dream Homes Logo" /> Dream Homes
+          </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Contact Us</h2>
-            <div class="contact-form">
-                <form action="#">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
+      </header>
+      <main>
+        <section class="contact-section">
+          <h1>Contact Us</h1>
+          <p>
+            We’d love to hear from you! Whether you have questions about our
+            properties, need assistance, or want to schedule a consultation,
+            please reach out to us using the form below or via the contact
+            details provided.
+          </p>
+
+          <div class="contact-form">
+            <form action="#" method="post">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+              />
+
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+
+              <div class="button-div">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
         </section>
-        
-    </main>
-    <footer>
+
+        <section class="contact-section">
+          <h1>Contact Details</h1>
+          <p>
+            <strong>Office Address:</strong> 1018 Winterhalt Avenue Cambridge,
+            Ontario, N3H 4J9 
+            <br/>
+            <strong>Phone:</strong> (123) 456-7890
+            <br/>
+            <strong>Email:</strong>
+            <a href="mailto:info@dreamhomes.com">info@dreamhomes.com</a>
+          </p>
+        </section>
+
+        <section>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.702364757709!2d-80.34974632431444!3d43.396549368993206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b89e96f926707%3A0x5822be00ec577e82!2s1018%20Winterhalt%20Ave%2C%20Cambridge%2C%20ON%20N3H%204J9!5e1!3m2!1sen!2sca!4v1732428062001!5m2!1sen!2sca"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </section>
+      </main>
+      <footer>
         <p>&copy; 2024 Dream Homes. All rights reserved.</p>
-    </footer>
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
